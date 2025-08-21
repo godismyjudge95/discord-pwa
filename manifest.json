@@ -1,18 +1,33 @@
 {
-  "manifest_version": 3,
-  "name": "Discord PWA",
-  "description": "Convert Slack web app to PWA ",
-  "version": "1.0",
-  "icons": {
-    "16": "assets/16x16.png",
-    "48": "assets/48x48.png",
-    "128": "assets/128x128.png"
-  },
-  "author": "Daniel Weaver <daniel@example.com>",
-  "content_scripts": [
-    {
-      "matches": ["*://discord.com/*"],
-      "js": ["content.js"]
-    }
-  ]
+    "manifest_version": 3,
+    "name": "Discord PWA",
+    "description": "Convert Slack web app to PWA ",
+    "version": "1.0",
+    "icons": {
+        "16": "assets/16x16.png",
+        "48": "assets/48x48.png",
+        "128": "assets/128x128.png"
+    },
+    "author": "Daniel Weaver <daniel@example.com>",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://discord.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "pwa/pwa-manifest.json",
+                "assets/*"
+            ],
+            "matches": [
+                "*://discord.com/*"
+            ]
+        }
+    ]
 }
