@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Slack PWA",
+  "name": "Discord PWA",
   "description": "Convert Slack web app to PWA ",
   "version": "1.0",
   "icons": {
@@ -8,10 +8,10 @@
     "48": "assets/48x48.png",
     "128": "assets/128x128.png"
   },
-  "author": "Anshu Meena <anshu@frimware.in>",
+  "author": "Daniel Weaver <daniel@example.com>",
   "content_scripts": [
     {
-      "matches": ["*://app.slack.com/*"],
+      "matches": ["*://discord.com/*"],
       "js": ["content.js"]
     }
   ]
